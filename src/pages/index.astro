@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+    <article class="centered">
+      <div class="card-body" style="height: 16vh; background-color: var(--bg-red); color: var(--red)">
+        <h1> why a custom website? </h1>
+        <p> carrd wouldnt fucking work on firefox <p>
+      </div>
+      <div class="card-body" style="height: 24vh; background-color: var(--bg-orange); color: var(--orange)">
+        <h1> interests </h1>
+        <p>
+        - smash melee </br>
+        - yoshi </br>
+        - general programming </br>
+        </p>
+      </div>
+      <div class="card-body" style="height: 24vh; background-color: var(--bg-yellow); color: var(--yellow)">
+        <h1> icks/dont talk to me if youre </h1>
+        <p>
+        wait actually im not that picky </br>
+        feel free to talk to me </br>
+        ill just block you if i hate you 
+        </p>
+      </div>
+      <div class="card-body" style="height: 20vh">
+        <h2> thanks for visiting! <h2>
+        <img class="yoshi-image" src="yoshi.png" alt="yoshi">
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<style>
+  .centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+gap: 10px;
+  }
+  .card-body {
+    background-color: var(--bg-0);
+    width: 60vh;
+    height: 75vh;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .yoshi-image {
+    height: 7vh;
+  }
+  body {
+    color: var(--fg);
+    font-family: Poppins, sans-serif;
+  }
+  h1 {
+    font-family: Renogare, sans-serif;
+  }
+  ul {
+    list-style-type: none;
+  }
+</style>

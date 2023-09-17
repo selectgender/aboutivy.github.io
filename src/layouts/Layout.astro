@@ -1,0 +1,79 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%;
+		);
+    --bg-dim: #232A2E;
+    --bg-red: #543A48;
+    --bg-orange: #514045;
+    --bg-yellow: #4D4C43;
+    --bg-green: #425047;
+    --bg-blue: #3A515D;
+    --bg-0: #2F353B;
+    --fg: #D3C6AA;
+    --red: #E67E80;
+    --orange: #E69875;
+    --yellow: #DBBC7F;
+    --green: #A7C808;
+    --blue: #7FBBB3;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: var(--bg-dim);
+		background-size: 224px;
+  }
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+  @font-face {
+    font-family: Renogare;
+    src: url('/fonts/RenogareRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Poppins;
+    src: url('/fonts/PoppinsRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>
